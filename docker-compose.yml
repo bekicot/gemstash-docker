@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    volumes:
+      - ~/.gemstash:/root/.gemstash
+    ports:
+      - 9292:9292
