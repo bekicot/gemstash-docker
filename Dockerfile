@@ -1,5 +1,7 @@
 # Use an official Python runtime as a parent image
-FROM ruby:2.4.1
+FROM ruby:2.3-alpine
+
+RUN apk add --update build-base sqlite-dev
 
 RUN ["gem", "install", "gemstash"]
 RUN ["whoami"]
